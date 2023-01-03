@@ -1,0 +1,16 @@
+---
+## /* vim: set tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab autoindent: */
+
+# The configuration file
+dns_resolvconf: "/etc/resolv.conf"
+
+# The DNS servers
+dns_nameservers:
+- "127.0.0.1"
+
+# The domain
+dns_domain: "localdomain"
+
+# The search domains
+dns_search_domains:
+- "localdomain"

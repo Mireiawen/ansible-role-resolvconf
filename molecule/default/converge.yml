@@ -1,0 +1,29 @@
+---
+## /* vim: set tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab autoindent: */
+
+- name: 'Converge'
+  hosts: 'all'
+  become: true
+  vars:
+    dns_resolvconf: '/etc/resolvconf.docker'
+    dns_nameservers:
+    - "1.1.1.1"
+    - "8.8.8.8"
+    dns_domain: "localdomain.tld"
+    dns_search_domains:
+    - "localdomain.tld"
+    - "sub.localdomain.tld"
+    - "example.local"
+
+  pre_tasks:
+  - name: 'Make copy of the hosts file, as we cannot edit the one inside the Docker'
+    ansible.builtin.copy:
+      src: '/etc/resolv.conf'
+      dest: '{{ dns_resolvconf }}'
+      remote_src: true
+      force: false
+      owner: 'root'
+      group: 'root'
+      mode: 'u=rw,go=r'
+  roles:
+  - role: 'mireiawen.resolvconf'

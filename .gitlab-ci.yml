@@ -1,0 +1,30 @@
+---
+## /* vim: set tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab autoindent: */
+
+include:
+- project: 'mireiawenrose/gitlab-helpers'
+  ref: 'master'
+  file:
+  - '/workflow-mr.yml'
+  - '/molecule.yml'
+
+stages:
+- 'lint'
+- 'test'
+- 'destroy'
+
+molecule:lint:
+  stage: 'lint'
+  extends: '.molecule:lint'
+
+molecule:test:
+  stage: 'test'
+  extends: '.molecule:test'
+
+molecule:destroy:
+  stage: 'destroy'
+  extends: '.molecule:destroy'
+  when: 'always'
+
+  script:
+  - 'molecule destroy --all'
