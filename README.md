@@ -1,4 +1,4 @@
-![Build Status](https://img.shields.io/gitlab/pipeline-status/mireiawenrose/ansible-roles/resolvconf?branch=master&style=plastic) [![Ansible Galaxy](https://img.shields.io/badge/Ansible%20Galaxy-mireiawen.resolvconf-blueviolet)](https://galaxy.ansible.com/mireiawen/resolvconf)
+![Build Status](https://img.shields.io/gitlab/pipeline-status/mireiawenrose/ansible-roles/resolv.conf?branch=master&style=plastic) [![Ansible Galaxy](https://img.shields.io/gitlab/pipeline-status/mireiawenrose/ansible-roles/resolv.conf?branch=master&style=plastic)](https://galaxy.ansible.com/mireiawen/resolvconf)
 
 # Ansible resolv.conf
 
