@@ -2,13 +2,14 @@
 ## /* vim: set tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab autoindent: */
 
 galaxy_info:
-  author: 'Mira "Mireiawen" Manninen'
-  role_name: 'resolvconf'
   namespace: 'mireiawen'
+  role_name: 'resolvconf'
+  min_ansible_version: '7.1'
+
+  author: 'Mira "Mireiawen" Manninen'
   description: 'Updates the "resolv.conf" with own values'
   license: 'MIT'
 
-  min_ansible_version: '7.1'
   platforms:
   - name: 'Alpine'
     versions:
@@ -16,26 +17,32 @@ galaxy_info:
   - name: 'ArchLinux'
     versions:
     - 'all'
+  - name: 'Amazon Linux'
+    versions:
+    - '2'
+    - '2023'
   - name: 'Debian'
     versions:
-    # '10 Buster'
-    - 'buster'
     # '11 Bullseye'
     - 'bullseye'
+    # '12 Bookworm'
+    - 'bookworm'
   - name: 'Fedora'
     versions:
-    - 'all'
+    - '37'
+    - '38'
+  - name: 'OpenSUSE'
+    versions:
+    - '15.0'
+    - '15.1'
+    - '15.2'
+    - '15.3'
   # RedHat Enterprise Linux
   - name: 'EL'
     versions:
-    - '7'
     - '8'
   - name: 'Ubuntu'
     versions:
-    # '18.04 Bionic'
-    - 'bionic'
-    # '20.04 Focal'
-    - 'focal'
     # '22.04 Jammy'
     - 'jammy'
 
